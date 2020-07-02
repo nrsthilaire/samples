@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='style.css' rel='stylesheet' type='text/css'>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<div id="app" class="app-container">
+
+    <header>
+        <div class="topnav">
+            <a class="toggle" id="toggle"><span></span><span></span><span></span></a>
+            <div class="topnav-left">
+                <a class="topnav-left-button active" href="#home">Home</a>
+                <a class="topnav-left-button" href="#about">About</a>
+                <a class="topnav-left-button" href="#contact">Contact</a>
+            </div>
+            <div class="topnav-right">
+                <a class="topnav-right-button" href="#buy">Buy</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="flippers">
+            <div id="prev-button" class="flipper left"></div>
+            <div id="next-button" class="flipper right"></div>
+        </div>
+
+        <div class="carousel">
+            <input class="slide" type="radio" name="carousel" id="s1">
+            <input class="slide" type="radio" name="carousel" id="s2" checked>
+            <input class="slide" type="radio" name="carousel" id="s3">
+            <label for="s1" id="slide1"></label>
+            <label for="s2" id="slide2"></label>
+            <label for="s3" id="slide3"></label>
+        </div>
+
+        <div class="pagination">
+            <ul>
+                <li id="p1" class="page" onclick="gotoSlide('1');"><a >Slide1</a></li>
+                <li id="p2" class="page current" onclick="gotoSlide('2');"><a >Slide2</a></li>
+                <li id="p3" class="page" onclick="gotoSlide('3');"><a >Slide3</a></li>
+            </ul>
+        </div>
+        
+    </section>
+</div>
+<script type="text/javascript" src="script.js" ></script>
+
+</body>
+</html>
