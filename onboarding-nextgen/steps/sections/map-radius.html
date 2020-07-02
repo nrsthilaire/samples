@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		html,
+		body,
+		#map {
+		  height: 500px;
+		  width: 100%;
+		  margin: 0px;
+		  padding: 0px
+		}
+	</style>
+
+
+
+</head>
+<body>
+
+<input id="zipcode" value="94404" type="text" />
+
+ <select id="radius" class="input">
+            <option value="5">5 miles</option>
+            <option value="10">10 miles</option>
+            <option value="15">15 miles</option>
+            <option value="20" selected="">20 miles</option>
+            <option value="25">25 miles</option>
+            <option value="30">30 miles</option>
+            <option value="35">35 miles</option>
+            <option value="40">40 miles</option>
+            <option value="45">45 miles</option>
+            <option value="50">50 miles</option>
+            <option value="55">55 miles</option>
+            <option value="60">60 miles</option>
+            <option value="65">65 miles</option>
+            <option value="70">70 miles</option>
+            <option value="75">75 miles</option>
+            <option value="80">80 miles</option>
+            <option value="85">85 miles</option>
+            <option value="90">90 miles</option>
+            <option value="95">95 miles</option>
+            <option value="100">100 miles</option>
+        </select>
+<input id="geocode" value="geocode" type="button" onclick="addAddress()" />
+
+<div id="map"></div>
+
+	<script type="text/javascript">
+							
+
+var startLatLng = {lat: 37.571663, lng: -122.266887};
+var meter = 0.00062137;
+var zipcode = 94404;
+var radius = 20;
+
+var marker;
+var markers= [];
+
+var geocoder;
+var map;
+
+var icon = '../images/map-pin-icon.svg';
+var work_radius;
+
+				// Add the users point to the map
+					function addAddress() {
+
+					  // Get the users current location
+					  var location = document.getElementById("zipcode").value; // Users postcode
+
+					  // Translate the users location onto the map
+					  geocoder.geocode({
+					    		'address': location
+						  	}, function(results, status) {
+						    if (status == google.maps.GeocoderStatus.OK) {
+
+							    // Center around the users location
+							    map.setCenter(results[0].geometry.location);
+
+							    addMarker(results[0].geometry.location);
+						    }
+					  });
+					}
+
+					 // Adds a marker to the map and push to the array.
+				      function addMarker(location) {
+						
+					      if (markers.length > 0){
+					      	deleteMarkers();
+					      }
+					      
+					    var radiusSelect = document.getElementById("radius");
+						radius = radiusSelect.options[radiusSelect.selectedIndex].value;
+
+					      	var radius_meters = radius / meter;
+
+					        var marker = new google.maps.Marker({
+					          position: location,
+					          map: map,
+					          icon: icon,
+					        });
+
+					         // Construct the radius circle
+						      var radiusOptions = {
+						        strokeColor: "#f96302",
+						        strokeOpacity: 0.0,
+						        strokeWeight: 1,
+						        fillColor: '#f96302',
+						        fillOpacity: 0.25,
+						        map: map,
+						        center: marker.getPosition(), // I want to set the center around the users location
+						        radius: radius_meters
+						      };
+
+					      // add the radius circle to the map
+					      work_radius = new google.maps.Circle(radiusOptions);
+
+				        markers.push(marker);
+				      }
+
+				      // Sets the map on all markers in the array.
+				      function setMapOnAll(map) {
+				        for (var i = 0; i < markers.length; i++) {
+				          markers[i].setMap(map);
+				        }
+				      }
+
+				      // Removes the markers from the map, but keeps them in the array.
+				      function clearMarkers() {
+				        setMapOnAll(null);
+				        work_radius.setMap(null);
+				      }
+
+				      // Shows any markers currently in the array.
+				      function showMarkers() {
+				        setMapOnAll(map);
+				      }
+
+				      // Deletes all markers in the array by removing references to them.
+				      function deleteMarkers() {
+				        clearMarkers();
+				        markers = [];
+				      }
+
+
+					// Create our base map object 
+					function initMap() {
+					  geocoder = new google.maps.Geocoder();
+					  var latlng = new google.maps.LatLng(startLatLng);
+					  
+					  var mapOptions = {
+					    zoom: 10,
+					    center: latlng,
+					    mapTypeId: google.maps.MapTypeId.ROADMAP
+					  }
+					  
+					  map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+					  addMarker(startLatLng);
+					}
+
+
+
+
+	</script>
+
+
+	       <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdSteIWBGSdHViOdiZPSGdkpygvgQYESU&callback=initMap">
+    </script>
+
+</body>
+</html>

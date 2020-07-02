@@ -1,0 +1,301 @@
+
+
+
+<!-- ADD Occupations: -->
+<section id="section-occupations" class="onboarding-section">
+		<div class="layout flex-wrap padding-x-2 padding-top-2-mobile-only padding-y-6-tablet margin-x-auto margin-bottom-6">
+
+                <!-- HEADING -->
+				<div class="layout-item is-12 margin-bottom-6-tablet margin-bottom-3-mobile-only">
+                    <h2 class="heading3 font-weight-bold padding-bottom-1">Add your occupation(s)</h2>
+                    <p class="subheading text-medium color-gray70">Tell us what you do and we’ll send you customers.</p>
+                </div>
+
+                <!-- Content -->
+				<div class="layout-item is-12">
+					<div class="widget-container">
+						
+		                        <div id="add-occupation" class="license-tool-container">
+		                            
+		                            <div id="add-occupation-tool" class="add-occupation-tool contents layout flex-wrap gap-2">
+		                                
+						                                <div id="pr-occupation-select" class="layout-item is-12 is-5-tablet">
+						                                      <div error="please select an occupation" class="input-container input-message">
+						                                        <select id="occupation-selector" name="occupation-select" class="input occupation-select">
+						                                            <option value="default" disabled="" selected=""></option>
+						                                            <option value='Concrete/Masonry Pro'>Concrete/Masonry Pro</option>
+						                                            <option value='General Contractor'>General Contractor</option>
+						                                            <option value='Plumber'>Plumber</option>
+						                                            <option value='Deck Builder'>Deck Builder</option>
+						                                            <option value='Painter'>Painter</option>
+						                                            <option value='Carpenter'>Carpenter</option>
+						                                            <option value='House Cleaner'>House Cleaner</option>
+						                                            <option value='Handyman'>Handyman</option>
+						                                            <option value='Electrician'>Electrician</option>
+						                                            <option value='Landscaper'>Landscaper</option>
+						                                        </select>
+						                                        <label class="input-label">Select your occupation...</label>
+						                                    </div>
+						                                </div><!--  / pr-occupation-select -->
+						                                    
+
+
+						                                 <div id="pr-state-select" class="layout-item display-flex is-12 is-5-tablet">
+						                                      <div error="please select a state" class="input-container input-message">
+						                                        <select id="state-selector" class="input state-select">
+						                                            <option value="default" disabled="" selected=""></option>
+						                                            <option value="AL">Alabama</option>
+						                                            <option value="AK">Alaska</option>
+						                                            <option value="AZ">Arizona</option>
+						                                            <option value="AR">Arkansas</option>
+						                                            <option value="CA">California</option>
+						                                            <option value="CO">Colorado</option>
+						                                            <option value="CT">Connecticut</option>
+						                                            <option value="DE">Delaware</option>
+						                                            <option value="DC">District Of Columbia</option>
+						                                            <option value="FL">Florida</option>
+						                                            <option value="GA">Georgia</option>
+						                                            <option value="HI">Hawaii</option>
+						                                            <option value="ID">Idaho</option>
+						                                            <option value="IL">Illinois</option>
+						                                            <option value="IN">Indiana</option>
+						                                            <option value="IA">Iowa</option>
+						                                            <option value="KS">Kansas</option>
+						                                            <option value="KY">Kentucky</option>
+						                                            <option value="LA">Louisiana</option>
+						                                            <option value="ME">Maine</option>
+						                                            <option value="MD">Maryland</option>
+						                                            <option value="MA">Massachusetts</option>
+						                                            <option value="MI">Michigan</option>
+						                                            <option value="MN">Minnesota</option>
+						                                            <option value="MS">Mississippi</option>
+						                                            <option value="MO">Missouri</option>
+						                                            <option value="MT">Montana</option>
+						                                            <option value="NE">Nebraska</option>
+						                                            <option value="NV">Nevada</option>
+						                                            <option value="NH">New Hampshire</option>
+						                                            <option value="NJ">New Jersey</option>
+						                                            <option value="NM">New Mexico</option>
+						                                            <option value="NY">New York</option>
+						                                            <option value="NC">North Carolina</option>
+						                                            <option value="ND">North Dakota</option>
+						                                            <option value="OH">Ohio</option>
+						                                            <option value="OK">Oklahoma</option>
+						                                            <option value="OR">Oregon</option>
+						                                            <option value="PA">Pennsylvania</option>
+						                                            <option value="RI">Rhode Island</option>
+						                                            <option value="SC">South Carolina</option>
+						                                            <option value="SD">South Dakota</option>
+						                                            <option value="TN">Tennessee</option>
+						                                            <option value="TX">Texas</option>
+						                                            <option value="UT">Utah</option>
+						                                            <option value="VT">Vermont</option>
+						                                            <option value="VA">Virginia</option>
+						                                            <option value="WA">Washington</option>
+						                                            <option value="WV">West Virginia</option>
+						                                            <option value="WI">Wisconsin</option>
+						                                            <option value="WY">Wyoming</option>
+						                                        </select>
+						                                        <label class="input-label">Select your state...</label>
+						                                    </div>
+						                                </div> <!-- / pr-state-select -->
+
+						                                
+						                                <div class="layout-item display-flex is-12 is-2-tablet padding-top-2">
+						                                	<button id='add-occupation-btn' class='add-occupation-btn button button-block' data-type="normal">Add</button>
+						                                </div>
+
+		                            </div> <!-- / contents -->
+
+		                        </div> <!-- / add-occupation -->
+							
+
+		                    </div>
+            					<div class="add-occ-errormsg error-message uploader-message text-medium color-red padding-y-2 text-align-left">Error Message</div>
+
+                </div>
+
+					
+        		<div class="section-footer">
+                    <!-- <div class="section-footer-left">
+                    	<button class='button button-large button-flat prevstep-btn section-back-btn padding-right-6' data-target="1">Back</button>
+                    </div> -->
+                    <!-- <div class="section-footer-right">
+                    	<button id="occupations-next-btn"class='button button-large nextstep-btn'>Next</button>
+                    </div> -->
+                </div>
+			</div>
+
+</section>
+
+
+<!-- ADD LICENSES: -->
+<section id="section-licenses" class="onboarding-section">
+		<div class="layout flex-wrap padding-x-2 padding-top-2-mobile-only padding-y-6-tablet margin-x-auto margin-bottom-6">
+
+                <!-- HEADING -->
+				<div class="layout-item is-12 margin-bottom-6-tablet margin-bottom-3-mobile-only">
+                    <h2 class="heading3 font-weight-bold padding-bottom-1">Add your state license number(s)</h2>
+                    <p class="subheading text-medium">Confirm your professional status.</p>
+                </div>
+
+                <!-- Content -->
+				<div class="layout-item is-12 border-bottom-gray30">
+					<div id="state-occupation-pods" class="widget-container">
+							<div class="pod-container">
+									
+
+							<!-- STATE POD -->
+								                <!-- <div class='state-pod-container' data-state="CA">
+								                    <p class='text-large font-weight-semibold color-gray80'>CALIFORNIA</p>
+									                                
+									                                <ul class="occupation-list">     -->          
+
+																			<!-- OCCUPATION POD -->
+											                                <!-- <li class="occupation-listitem" data-occ="General-Contractor" data-state="CA">
+																			    <div class="occupation-pod">
+																		            <h6 class="text-large pod-occupation General-Contractor">General Contractor <span class="pod-requirements">No License Required</span></h6>
+																			        <div class="delete-trashcan-icon"></div>
+																			    </div>
+																			</li> --><!-- / OCCUPATION PODS  -->
+
+
+									                                <!-- </ul>  --><!-- / OCCUPATION POD LIST -->
+
+									                                <!-- <ul class="license-list display-block margin-y-5"> -->
+																		
+																		<!-- LICENSE INPUT POD -->
+									                                	<!-- <li class="license-pod margin-top-3" data-occ="General-Contractor" data-state="CA" data-license="C-29 Masonry License"> -->
+									                                		<!-- <div class="alert alert--error" type="box">Agent comment notifcation will go here</div> -->
+										                                	<!-- <p class='text-large font-weight-semibold color-gray80'>C-29 Masonry License</p>
+																			<div error="please enter your license number" class="input-container input-message licensenumber-input">
+												                        		<input class="input" type="text" value="" placeholder=""/>
+												                        		<label class="input-label">Enter License Number</label>
+												                    		</div> -->
+									                                	<!-- </li>  --><!-- / LICENSE INPUT POD -->
+
+											                    	<!-- </ul> --><!-- /	LICENSE POD LIST -->
+
+								               <!--  </div> --> <!-- / STATE OCCUPATION AND LICENSE INPUT CONTAINER -->
+
+
+								</div> <!-- / pod-container -->
+
+		                       
+
+
+					</div> <!-- widget-container -->
+				</div> 
+
+				<div class="section-footer ">
+                    <div class="section-footer-left">
+                    	<button id="add-another-btn" class='link-to-modal button button-flat prevstep-btn padding-right-6 margin-bottom-2-mobile-only' data-target="#pr-modal-LicenseTool">Add another occupation</button>
+                    </div>
+                    <div class="section-footer-right">
+                    	<button id="licenses-next-btn" class='button button-large nextstep-btn'>Next</button>
+                    </div>
+                </div>
+
+		</div>
+</section>
+
+
+
+
+<!-- ADD SERVICES: -->
+<section id="section-services" class="onboarding-section">
+		<div class="layout flex-wrap padding-x-2 padding-top-2-mobile-only padding-y-6-tablet margin-x-auto margin-bottom-6">
+
+                <!-- HEADING -->
+				<div class="layout-item is-12 margin-bottom-6-tablet margin-bottom-3-mobile-only">
+                    <h2 class="heading3 font-weight-bold padding-bottom-1">Verify services for your occupations</h2>
+                    <p class="subheading text-medium">Services help us match customers with the right Pro. You can edit them any time.</p>
+                </div>
+
+                <!-- Content -->
+				<div class="layout-item is-12">
+					<div class="widget-container">
+						<ul class="occupation-services-list">
+
+							  <!-- INSERT OCCUPATION PODS HERE -->
+					         <!--  <li class="services-listitem" data-occ="General-Contractor" data-state="CA">
+	                               
+	                               <div class="services-pod-text">
+	                                        <h6 class="services-name heading6 font-weight-semibold padding-bottom-1">General Contractor</h6>
+	                                    
+	                                        <div class="services-text text-large">
+	                                          <span class="num-services-selected">|n|</span> of <span class="num-services-total">|x|</span> services added
+	                                        </div>
+	                                </div>
+
+	                                <button class="edit-services-btn button" data-occ="General-Contractor" data-state="CA">Edit Services</button>
+
+	                        	</li> -->
+
+							
+						</ul>
+					</div>
+				</div>
+
+				<div class="section-footer ">
+                    <div class="section-footer-left">
+                    	<button id="back-to-license-btn" class='button button-flat prevstep-btn margin-bottom-2-mobile-only'>Edit Occupations</button>
+                    </div>
+                    <div class="section-footer-right">
+                    	<button id="occupations-submit" class='button button-large nextstep-btn'>Submit</button>
+                    </div>
+                </div>
+
+		</div>
+</section>
+
+
+
+
+
+<!-- NEXT STEPS PAGE: -->
+<section id="section-nextsteps-occupations" class="onboarding-section">
+        <div class="layout flex-wrap padding-x-2 padding-top-2-mobile-only padding-y-6-tablet margin-x-auto margin-bottom-6">
+
+                <!-- HEADING -->
+        <div class="layout-item is-12 margin-bottom-6-tablet margin-bottom-3-mobile-only">
+                    <h2 class="heading3 font-weight-bold padding-bottom-1">State license number(s) received</h2>
+        </div>
+
+
+                <!-- Content -->
+                <div class="layout-item is-12">
+                    <h6 class="layout-item is-12 heading6 font-weight-semibold text-align-left padding-y-2">What’s next:</h6>
+            
+                    <div class="section-status-steps">
+                        <div class="section-status-step">
+                            <div class="section-status-message complete text-medium color-gray70">Our team is reviewing your state license(s).</div>
+                        </div>
+                        <div class="section-status-divider">
+                            <div class="status-divider-icon"></div>
+                        </div>
+                        <div class="section-status-step">
+                            <div class="section-status-message email text-medium color-gray70">We’ll update you within 24 hours.</div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+        </div>
+</section>
+
+
+
+<!-- CONFIRMATION PAGE: -->
+<section id="section-confirmation-occupations" class="onboarding-section">
+        <div class="layout flex-wrap padding-x-2 padding-top-2-mobile-only padding-y-6-tablet margin-x-auto margin-bottom-6">
+
+                <!-- HEADING -->
+        <div class="layout-item is-12 margin-bottom-6-tablet margin-bottom-3-mobile-only">
+                  <h6 class="heading6">Well done — your state licenses and services are complete!</h6>
+        </div>
+
+        </div>
+</section>
+
+

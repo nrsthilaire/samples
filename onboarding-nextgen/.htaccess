@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Pro Referral On-boarding"
+AuthUserFile "/home4/indesign/.htpasswds/public_html/clients/thd/pr/onboarding-nextgen/passwd"
+require valid-user

@@ -1,0 +1,160 @@
+<!-- General Liability: -->
+<section id="section-general-liability" class="onboarding-section">
+    <div class="layout flex-wrap padding-x-2 padding-top-2-mobile-only padding-y-6-tablet margin-x-auto margin-bottom-6">
+        
+        <!-- HEADING -->
+        <div class="layout-item is-12 margin-bottom-6-tablet margin-bottom-3-mobile-only">
+            <h2 class="heading3 font-weight-bold padding-bottom-1">Provide proof of General Liability insurance</h2>
+            <p class="subheading text-medium color-gray70">Show us you’re protected from the unexpected.</p>
+        </div>
+
+        <!-- Content -->
+        <div class="layout-item is-12">
+            <h6 class="subheading heading6 font-weight-semibold">Please upload a copy of your General Liability certificate</h6>
+            <p class="text-medium color-gray60 padding-top-1">(pdf, jpg or png) &nbsp;&nbsp;<a class="link-to-modal text-medium color-depot" data-target="#pr-modal-GL">See an example</a></p>
+        </div>
+
+
+
+        <div class="layout-item is-12 is-10-tablet margin-top-2">
+            <!-- <div class="alert alert--error" type="box">Agent comment notifcation will go here</div> -->
+            
+
+    <form action="https://script.google.com/macros/s/AKfycbzPlwIekiSVgWkcEimOkcSNNQRVBPKGUt_VlHN2NEQlbDlLuO0/exec" class="uploader-form" id="form-liability-upload" method="post">
+            <!-- UPLOADER -->
+            <div id="liability-upload-container" class="uploader-container">
+                <div class="uploaded-file-container display-none-mobile-only">
+                    <!-- <div id="loader-liability" class="loader">
+                        <div class="sawblade"></div>
+                    </div>
+                    <div id="success-liability" class="success-check"></div> -->
+                    <div id="loader-title" class="upload-title heading6 font-weight-semibold text-align-center color-gray40">Drag and drop a file here or</div>
+                </div>
+                    <div class="uploader-data" id="data-liability"></div>
+                    <button class="button uploader-button padding-x-5">
+                        <span class="upload-btn-text">Select a File</span>
+                        <input class="uploader-input" id="upload-liability" type="file" accept=".jpg, .jpeg, .png, .pdf" />
+                    </button>
+                
+            </div>
+
+
+            <!-- UPLOADED FILE - show after upload -->
+            <div id="file-uploaded-container" class="file-uploaded-container">
+                <div id="file-upload-spinner" class="loader-container"><div class="spinner"></div></div>
+                
+                <div id="file-upload-details" class="file-uploaded filetype-PDF text-align-left">
+                    <div id="uploaded-filename" class="link-to-modal file-uploaded-name text-medium" data-target="#pr-modal-UploaderPreview">Uploaded-File-Name.pdf</div>
+                    <div class="file-uploaded-size text-small color-gray60">568 KB</div>
+                </div>
+                <button id="delete-upload-file-btn" class="button button-flat delete-trashcan-icon"></button>
+            </div>
+</form>
+            <div class="error-message uploader-message text-medium color-red padding-y-2">Please upload a copy of your general liability</div>
+        </div>
+
+        <div class="layout-item is-12 is-2-tablet display-none-mobile-only margin-top-2"></div>
+
+        <div class="layout-item is-12 margin-top-2">
+            <div class="checkbox">
+                <input id="no-liability-checkbox" type="checkbox" name="no-liability" value="maybe" />
+                <label for="no-liability-checkbox">I don’t have an active General Liability policy</label>
+            </div>
+        </div>
+
+        <div id="no-liability-msg" class="layout-item is-12">
+            <div class="text-medium color-red padding-y-1">To join Pro Referral, you need an active General Liability policy.</div>
+        </div>
+
+        <div id="liability-dba" class="layout-item layout  flex-wrap is-12 margin-top-2 padding-y-4 margin-top-6 border-top-gray40">
+            <h6 class="layout-item is-12 heading6 font-weight-semibold text-align-left padding-y-2">Enter the insured business and/or DBA name exactly as it appears on your General Liability certificate.</h6>
+            
+            <div class="layout-item is-12 is-6-tablet">
+                
+                <div class="display-block">
+                    <div error="please enter your business name" class="input-container input-message">
+                        <input id="business-name-input" type="text" value="" placeholder="" class="input" />
+                        <label class="input-label">Business Name and/or DBA name</label>
+                    </div>
+                </div>
+
+                <div class="display-block">
+                    <div class="text-medium color-gray60  padding-bottom-2">This name will be displayed on your public profile.</div>
+                </div>
+            </div>
+
+            <div class="layout-item is-9 is-6-tablet padding-left-6-desktop">
+                <div id="dba-cutout" class="link-to-modal image-link padding-1" data-target="#pr-modal-DBA"><img src="./images/businessname-detail.jpg" /></div>
+            </div>
+        </div>
+
+
+        <!-- SHOP FOR LIABILITY -->
+        <div id="liability-shop" class="layout-item is-12 margin-top-6 padding-top-4 border-top-gray40">
+            <h6 class="subheading heading6 font-weight-semibold text-align-left">Shop for a General Liability policy through our preferred partner: </h6>
+            <div class="link-to-nextinsurance image-link margin-top-3 padding-2"><img src="./images/next-insurance-logo.jpg" /></div>
+        </div>
+
+<!-- SECTION FOOTER -->
+        <div id="liability-section-footer" class="section-footer">
+            <div class="section-footer-right">
+                <button id="liability-submit" class='button button-large nextstep-btn'>Submit</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+<!-- NEXTSTEPS PAGE: -->
+<section id="section-nextsteps-liability" class="onboarding-section">
+        <div class="layout flex-wrap padding-x-2 padding-top-2-mobile-only padding-y-6-tablet margin-x-auto margin-bottom-6">
+
+                <!-- HEADING -->
+        <div class="layout-item is-12 margin-bottom-6-tablet margin-bottom-3-mobile-only">
+            <h2 class="heading3 font-weight-bold padding-bottom-1">Proof of insurance received</h2>
+        </div>
+
+
+                <!-- Content -->
+                <div class="layout-item is-12">
+                    <h6 class="layout-item is-12 heading6 font-weight-semibold text-align-left padding-y-2">What’s next:</h6>
+            
+                    <div class="section-status-steps">
+                        <div class="section-status-step">
+                            <div class=""></div>
+                            <div class="section-status-message complete text-medium color-gray70">Our team is reviewing your General Liability insurance. </div>
+                        </div>
+
+                        <div class="section-status-divider">
+                            <div class="status-divider-icon"></div>
+                        </div>
+
+                        <div class="section-status-step">
+                            <div class=""></div>
+                            <div class="section-status-message email text-medium color-gray70">We’ll update you within 24 hours.</div>
+                        </div>
+                    </div>
+                   
+                </div>
+
+        </div>
+</section>
+
+
+
+
+<!-- CONFIRMATION PAGE: -->
+<section id="section-confirmation-liability" class="onboarding-section display-none">
+        <div class="layout flex-wrap padding-x-2 padding-top-2-mobile-only padding-y-6-tablet margin-x-auto margin-bottom-6">
+
+                <!-- HEADING -->
+        <div class="layout-item is-12 margin-bottom-6-tablet margin-bottom-3-mobile-only">
+            <h2 class="heading3 font-weight-bold padding-bottom-1">Provide proof of General Liability insurance</h2>
+                  <p class="subheading text-large color-gray70">Bravo — you’ve successfully added your general liability!</p>
+        </div>
+
+        </div>
+</section>
