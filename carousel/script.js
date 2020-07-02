@@ -1,24 +1,24 @@
-document.addEventListener("DOMContentLoaded", function(){
-  initApp();
+document.addEventListener("DOMContentLoaded", function () {
+	initApp();
 });
 
-	var currentSlide = 2;
-	var numofSlides = 3;
+var currentSlide = 2;
+var numofSlides = 3;
 
 
-function initApp(){
+function initApp() {
 	console.log('initApp');
 
-	var nextbtn = document.getElementById( 'next-button' );
-	var prevbtn = document.getElementById( 'prev-button' );
-	  
-  	nextbtn.onclick = function() {
-    	gotoNext();
-  	};
+	var nextbtn = document.getElementById('next-button');
+	var prevbtn = document.getElementById('prev-button');
 
-  	prevbtn.onclick = function() {
-    	gotoPrev();
-  	};
+	nextbtn.onclick = function () {
+		gotoNext();
+	};
+
+	prevbtn.onclick = function () {
+		gotoPrev();
+	};
 
 	document.onkeydown = checkKey;
 
@@ -26,50 +26,50 @@ function initApp(){
 
 
 function checkKey(e) {
-    e = e || window.event;
+	e = e || window.event;
 
-    if (e.keyCode == '37') { // left arrow
-       gotoPrev();
-    }
-    else if (e.keyCode == '39') { // right arrow
-       gotoNext();
-    }
+	if (e.keyCode == '37') { // left arrow
+		gotoPrev();
+	} else if (e.keyCode == '39') { // right arrow
+		gotoNext();
+	}
 
 }
 
 
-function gotoNext(){
+function gotoNext() {
 	console.log('next slide');
 
-		  var gotoslide = currentSlide + 1;
+	var gotoslide = currentSlide + 1;
 
-		  if (gotoslide > numofSlides){
-		    gotoslide = 1;
-		  }
-		  currentSlide = gotoslide;
+	if (gotoslide > numofSlides) {
+		gotoslide = 1;
+	}
+	currentSlide = gotoslide;
 
-    	gotoSlide(gotoslide);
+	gotoSlide(gotoslide);
 }
 
-function gotoPrev(){
+function gotoPrev() {
 	console.log('prev slide');
 
-		  var gotoslide = currentSlide - 1;
+	var gotoslide = currentSlide - 1;
 
-		  if (gotoslide < 1){
-		    gotoslide = 3;
-		  }
+	if (gotoslide < 1) {
+		gotoslide = 3;
+	}
 
-		  currentSlide = gotoslide;
+	currentSlide = gotoslide;
 
-    	gotoSlide(gotoslide);
+	gotoSlide(gotoslide);
 
 }
-function gotoSlide(slide){
+
+function gotoSlide(slide) {
 	var page = document.getElementsByClassName('page current');
 	for (var i = 0; i < page.length; i++) {
-	    page[i].classList.remove('current');
-	  }
-	document.querySelector( '#s'+slide ).checked = true;
-	document.querySelector( '#p'+slide ).classList.add('current');
+		page[i].classList.remove('current');
+	}
+	document.querySelector('#s' + slide).checked = true;
+	document.querySelector('#p' + slide).classList.add('current');
 }

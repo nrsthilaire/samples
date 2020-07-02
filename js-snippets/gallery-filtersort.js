@@ -7,7 +7,7 @@ $(function () {
     myClient = "0",
     currentImg = 0,
 
-    baseurl = "http://www.potterybarn.com/",
+    baseurl = "/",
 
     container = $('#container'),
     navicon = $('#nav-icon'),
